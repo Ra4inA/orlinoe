@@ -1,0 +1,283 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	font-family: 'OpenSans-Regular';
+	src: url('OpenSans-Regular.eot')
+}
+
+@font-face {
+	font-family: 'OpenSans-Regular';
+	src: url('OpenSans-Regular.ttf')
+}
+
+@font-face {
+	font-family: 'OpenSans-Semibold';
+	src: url('OpenSans-Semibold.eot')
+}
+
+@font-face {
+	font-family: 'OpenSans-Semibold';
+	src: url('OpenSans-Semibold.ttf')
+}
+
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url('OpenSans-Light.eot')
+}
+
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url('OpenSans-Light.ttf')
+}
+
+@font-face {
+	font-family: 'PT-Sans-Regular';
+	src: url('PT-Sans-Regular.eot')
+}
+
+@font-face {
+	font-family: 'PT-Sans-Regular';
+	src: url('PT-Sans-Regular.ttf')
+}
+
+@font-face {
+	font-family: 'PT-Sans-Bold';
+	src: url('PT-Sans-Bold.eot')
+}
+
+@font-face {
+	font-family: 'PT-Sans-Bold';
+	src: url('PT-Sans-Bold.ttf')
+}
+
+html,
+body,
+div {
+	margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #6b747c;
+	background: url(../images/tpl/body.jpg) no-repeat left top;
+}
+
+body.main {
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #6b747c;
+	background: #fff url(../images/tpl/main_body.jpg) no-repeat left top;
+}
+
+/* ========== h ========== */
+
+h1,
+div.h1,
+h2,
+div.h2,
+h3,
+div.h3,
+h4,
+div.h4,
+h5,
+div.h5,
+h6,
+div.h6 {
+	font-family: 'OpenSans-Semibold';
+	font-weight: normal;
+	margin: 0 0 0em 0;
+	text-transform: uppercase;
+	color: #1470da;
+}
+
+/* ========== h1 ========== */
+
+h1,
+div.h1 {
+	font-size: 2em;
+}
+
+/* ========== h2 ========== */
+
+h2,
+div.h2 {
+	font-size: 1.83em;
+}
+
+/* ========== h3 ========== */
+
+h3,
+div.h3 {
+	font-size: 1.66em;
+}
+
+/* ========== h4 ========== */
+
+h4,
+div.h4 {
+	font-size: 1.5em;
+}
+
+/* ========== h5 ========== */
+
+h5,
+div.h5 {
+	font-size: 1.33em;
+}
+
+/* ========== table ========== */
+
+table {
+	border: 0;
+	border-collapse: collapse;
+}
+
+/* ========== A ========== */
+
+a {
+	color: #1470da;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+/* ========== UL ========== */
+
+/* ==== menu ==== */
+
+ul.menu,
+ul.menu li,
+ul.form,
+ul.form li,
+ul.lists,
+ul.lists li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	list-style-image: none;
+}
+
+ul.menu,
+ul.menu li {
+	display: block;
+}
+
+/* ========== form ========== */
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+/* ====== label ====== */
+
+.lbl {
+	display: block;
+	font-size: 11px;
+	padding: 0 0 4px 0;
+}
+
+/* ====== textarea ====== */
+
+.textarea {
+	border: 1px solid #c4c3bb;
+	position: relative;
+	display: inline-block;
+}
+
+.textarea ._top_left {
+	height: 4px;
+	width: 3px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../images/tpl/textarea_tl.gif) no-repeat left top;
+}
+
+.textarea ._left {
+	background: url(../images/tpl/textarea_lr.gif) repeat-y left top;
+	padding-left: 3px
+}
+
+.textarea ._right {
+	background: url(../images/tpl/textarea_tb.gif) repeat-x left top;
+	padding-top: 4px;
+}
+
+.textarea ._body {
+	background: #fff;
+	padding: 0 3px 4px 0;
+}
+
+.textarea textarea {
+	border: 0;
+	background: none;
+}
+
+/* ========== img ========== */
+
+img {
+	border: 0;
+}
+
+/* ========== sep ========== */
+
+/* ========== sep_color ========== */
+
+.sep_color,
+.sep_color .left,
+.sep_color .right {
+	height: 1px;
+}
+
+.sep_color .left {
+	float: left;
+	width: 50%;
+	background: #2b282b;
+}
+
+.sep_color .right {
+	margin-left: 50%;
+	background: #2b282b;
+}
+
+/* ========== all ========== */
+
+.clr {
+	height: 0;
+	clear: both;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+.align_left {
+	text-align: left !important;
+}
+
+.align_right {
+	text-align: right !important;
+}
+
+.flt_left {
+	float: left;
+}
+
+.flt_right {
+	float: right;
+}
+
+/* ========== color ========== */
+
+.orange {
+	color: #f74923;
+}

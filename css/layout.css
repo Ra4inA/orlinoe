@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ========== Скелет ========== */
+
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	position: relative;
+}
+
+#footer,
+#push {
+	clear: both;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* ===== Скелет общие ===== */
+
+#container {
+	margin: 0 auto;
+	position: relative;
+}
+
+.header_body,
+.left_body,
+.right_body,
+.main_body,
+.footer_body {
+	position: relative;
+}
+
+/* ===== Шапка ===== */
+
+header {
+	margin: 0 auto;
+}
+
+header .header_body {
+	margin: 0 auto;
+}
+
+/* ===== Left ===== */
+
+div#left {
+	float: left;
+}
+
+/* ===== Right ===== */
+
+div#right {
+	float: right;
+}
+
+/* ===== Основной блок ===== */
+
+#main {}
+
+.main_body {
+	width: 100%;
+	float: left;
+}
+
+/* ===== Подвал ===== */
+
+#footer {
+	margin: 0 auto;
+}
+
+.footer_body {
+	margin: 0 auto;
+}
