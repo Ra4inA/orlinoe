@@ -5,19 +5,16 @@
 /* fonts */
 
 @font-face {
-    font-family: 'Open Sans';
+    font-family: 'OpenSans-Regular';
     src: url('../fonts/');
     src: url('../fonts/?#iefix') format('embedded-opentype'),
         url('../fonts/OpenSans.woff2') format('woff2'),
         url('../fonts/OpenSans.woff') format('woff'),
         url('../fonts/OpenSans.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Open Sans';
+    font-family: 'OpenSans-Light';
     src: url('../fonts/OpenSans-Light.eot');
     src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
         url('../fonts/OpenSans-Light.woff2') format('woff2'),
@@ -29,7 +26,7 @@
 }
 
 @font-face {
-    font-family: 'Open Sans';
+    font-family: 'OpenSans-Semibold';
     src: url('../fonts/OpenSans-Semibold.eot');
     src: url('../fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
         url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
@@ -41,7 +38,7 @@
 }
 
 @font-face {
-    font-family: 'PT Sans';
+    font-family: 'PT-Sans-Regular';
     src: url('../fonts/PTSans-Regular.eot');
     src: url('../fonts/PTSans-Regular.eot?#iefix') format('embedded-opentype'),
         url('../fonts/PTSans-Regular.woff2') format('woff2'),
@@ -53,7 +50,7 @@
 }
 
 @font-face {
-    font-family: 'PT Sans';
+    font-family: 'PT-Sans-Bold';
     src: url('../fonts/PTSans-Bold.eot');
     src: url('../fonts/PTSans-Bold.eot?#iefix') format('embedded-opentype'),
         url('../fonts/PTSans-Bold.woff2') format('woff2'),
@@ -63,6 +60,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 
 
 /* reset */

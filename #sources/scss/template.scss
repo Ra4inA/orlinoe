@@ -1769,6 +1769,15 @@ div.pop_bg {
 
 
 @media screen and (max-width: 980px) {
+	* {
+		box-sizing: border-box;
+	}
+
+
+	.main {
+		overflow-x: hidden;
+	}
+
 	#wrap {
 		padding: 0 10px;
 	}
@@ -1900,6 +1909,10 @@ div.pop_bg {
 	justify-content: center;
 }
 
+.mod_main_slider .btn  {
+	line-height: 2.1em;
+}
+
 
 .mod_main_slider .title {
 	text-align: center;
@@ -1909,7 +1922,13 @@ div.pop_bg {
 	text-align: center;
 }
 
-	
+.mod_main_slider .prev {
+	right: 51%;
+}
+
+.mod_main_slider .next {
+	left: 51%;
+}
 
 
 
@@ -2012,6 +2031,8 @@ div.pop_bg {
 
 
 
+
+
 // footer
 
 #footer {
@@ -2026,7 +2047,9 @@ div.pop_bg {
 	height: auto !important;
 	width: 100%;
 	display: flex;
-	// flex-direction: column;
+	align-items: center;
+
+	box-sizing: border-box;
 
 	flex-wrap: wrap;
 
@@ -2043,6 +2066,12 @@ div.pop_bg {
 .mod_copy {
 	flex: 1 1 100%;
 	text-align: center;
+	margin-top: 20px;
+}
+
+.mod_count {
+	flex: 1 1 100%;
+	margin-top: 20px;
 }
 
 
@@ -2051,6 +2080,13 @@ div.pop_bg {
 @media screen and (max-width: 830px) {
 	.mod_callback {
 		display: none;
+	}
+
+	// footer
+
+	.mod_social {
+		flex: 1 1 100%;
+		margin-top: 20px;
 	}
 }
 
@@ -2073,6 +2109,9 @@ div.pop_bg {
 		flex-wrap: nowrap;
 	}
 
+	.mod_logo {
+		flex: 0 0 35%;
+	}
 	.mod_top_address {
 		margin-left: 20px;
 	}
@@ -2123,7 +2162,7 @@ div.pop_bg {
 }
 
 .mod_content_galery figure img {
-	width: 100%;
+	// width: 100%;
 }
 
 
@@ -2169,10 +2208,14 @@ div.pop_bg {
 	flex-direction: column;
 }
 .news .left {
-	width: auto;
+	margin: 0 auto;
 }
 .news .right {
 	margin: 0;
+}
+
+.news .date {
+	text-align: center;
 }
 
 // list pages
@@ -2201,6 +2244,21 @@ div.pop_bg {
 	margin: 0;
 }
 
+.rooms .right {
+	margin-bottom: 20px;
+}
+
+.rooms .radius_orange {
+	padding-left: 18px;
+}
+
+.rooms .right .btn {
+	line-height: 1.9em;
+}
+.rooms .title {
+	text-align: center;
+}
+
 
 
 
@@ -2227,17 +2285,36 @@ div.pop_bg {
 .reviews .date {
 	order: 1;
 }
+
+
+
+#comment {
+	width: 550px;
+}
+
+.reviews_add_frm .btn {
+	line-height: 1.9em;
+}
 }
 
 
 
 @media screen and (max-width: 576px) {
+	.mod_logo {
+		width: auto;
+	}
+
+	.mod_top_address .phone {
+		font-size: 0.6em;
+	}
+
+
 	body.main {
 		background: none;
 	}
 
 	.main_info img{
-		width: 100%;
+		// width: 100%;
 	}
 	
 	
@@ -2245,9 +2322,7 @@ div.pop_bg {
 		width: auto;
 	}
 
-	.mod_logo {
-		flex: 0 1 auto;
-	}
+	
 
 
 
@@ -2276,24 +2351,175 @@ div.pop_bg {
 
 	// list pages
 
+	.reviews_add_frm input.itext {
+		width: 100%;
+	}
+
+	#comment {
+		width: 100%;
+		max-height: 200px;
+		height: 200px;
+		resize: none;
+		
+	}
+
+	// footer
+
+	.mod_foot_menu {
+		flex: 1 1 100%;
+		margin-top: 20px;
+	}
+
 
 .list_pages img{
-	width: auto;
+	// width: auto;
 }
 }
 
 
-.mod_main_menu {
-	font-size: 3px;
+
+
+
+
+
+
+
+
+
+
+
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+	position: fixed;
+	pointer-events: none;
+	left: 0;
+	top: 0;
+}
+.menu__btn {
+    display: none;
 }
 
 
 
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .header_menu {
+  visibility: visible !important;
+  left: 0;
+}
+
+
+
+// ul.menu {
+//     display: flex;
+//     flex: 1 1 auto;
+//     max-width: 400px;
+//     margin: 0 auto;
+//     align-items: center;
+
+// }
+
+// ul.menu li {
+//     display: flex;
+//     flex: 1 1 auto;
+// }
+
+// .nav-list-button {
+//     // flex: 1 1 auto;
+//     // text-align: center;
+//     // color: #fff;
+//     // transition: all 0.2s ease;
+//     // padding: 25px 0;
+//     // cursor: pointer;
+    
+
+// }
+
+// .nav-list-button:hover, ._active {
+//     background-color: rgba(242,203,10, 0.8);
+//     color: #111;
+// }
 
 
 
 
+@media screen and (max-width: 768px) {
+	.menu__btn {
+        display: flex; /* используем flex для центрирования содержимого */
+        align-items: center;  /* центрируем содержимое кнопки */
+        position: fixed;
+        top: 20px;
+        left: 20px;  width: 26px;
+        height: 26px;  cursor: pointer;
+        z-index: 11;
+    }/* добавляем "гамбургер" */
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;  width: 100%;
+        height: 2px;  background-color: rgba($color: #fff, $alpha: 0.7);
+        transition: all 0.2s ease;
+    }
+  .menu__btn > span::before {
+        content: '';
+        top: -8px;
+        transition: all 0.2s ease;
+    }
+  .menu__btn > span::after {
+        content: '';
+        top: 8px;
+        transition: all 0.2s ease;
+    }
 
 
 
+    
 
+    /* контейнер меню */
+    .mod_main_menu .menu {
+        transition: all 0.2s ease;
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;  
+        width: 300px;
+        height: 100vh;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background: #fff url(../images/tpl/main_body.jpg) no-repeat left top;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        z-index: 10;
+      }/* элементы меню */
+      .mod_main_menu li {
+        display: block;
+		width: 100%;
+
+        // font-size: 1em;
+		
+
+		background: none;
+		
+
+      }
+
+      .mod_main_menu a {
+		line-height: 1.9em;
+		background: none;
+	  }
+
+	
+}
