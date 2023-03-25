@@ -92,7 +92,7 @@ jQuery(document).ready(function($){
 	//	слайдер
 	
 	$(".mod_main_slider ul").carouFredSel({
-		auto    : true,
+		auto    : false,
 		prev    : ".mod_main_slider .prev",
 		next    : ".mod_main_slider .next",
 		scroll  : 1
