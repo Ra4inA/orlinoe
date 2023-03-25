@@ -1,55 +1,71 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+/* fonts */
+
 @font-face {
-	font-family: 'OpenSans-Regular';
-	src: url('OpenSans-Regular.eot')
+    font-family: 'Open Sans';
+    src: url('../fonts/');
+    src: url('../fonts/?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSans.woff2') format('woff2'),
+        url('../fonts/OpenSans.woff') format('woff'),
+        url('../fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-	font-family: 'OpenSans-Regular';
-	src: url('OpenSans-Regular.ttf')
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Light.eot');
+    src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSans-Light.woff2') format('woff2'),
+        url('../fonts/OpenSans-Light.woff') format('woff'),
+        url('../fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-	font-family: 'OpenSans-Semibold';
-	src: url('OpenSans-Semibold.eot')
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Semibold.eot');
+    src: url('../fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
+        url('../fonts/OpenSans-Semibold.woff') format('woff'),
+        url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-	font-family: 'OpenSans-Semibold';
-	src: url('OpenSans-Semibold.ttf')
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Regular.eot');
+    src: url('../fonts/PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PTSans-Regular.woff2') format('woff2'),
+        url('../fonts/PTSans-Regular.woff') format('woff'),
+        url('../fonts/PTSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-	font-family: 'OpenSans-Light';
-	src: url('OpenSans-Light.eot')
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Bold.eot');
+    src: url('../fonts/PTSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PTSans-Bold.woff2') format('woff2'),
+        url('../fonts/PTSans-Bold.woff') format('woff'),
+        url('../fonts/PTSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
-@font-face {
-	font-family: 'OpenSans-Light';
-	src: url('OpenSans-Light.ttf')
-}
 
-@font-face {
-	font-family: 'PT-Sans-Regular';
-	src: url('PT-Sans-Regular.eot')
-}
-
-@font-face {
-	font-family: 'PT-Sans-Regular';
-	src: url('PT-Sans-Regular.ttf')
-}
-
-@font-face {
-	font-family: 'PT-Sans-Bold';
-	src: url('PT-Sans-Bold.eot')
-}
-
-@font-face {
-	font-family: 'PT-Sans-Bold';
-	src: url('PT-Sans-Bold.ttf')
-}
+/* reset */
 
 html,
 body,

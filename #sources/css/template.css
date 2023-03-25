@@ -36,11 +36,11 @@ div.abs_top {
 
 /* ===== Шапка ===== */
 header .header_body {
-  min-height: 159px;
+  height: 159px;
 }
 
 .main header .header_body {
-  min-height: 159px;
+  height: 133px;
 }
 
 /* ===== Left ===== */
@@ -801,7 +801,7 @@ div.pop_bg {
   color: #d2dfff;
 }
 
-.mod_top_address-inner div {
+.mod_top_address div {
   width: auto;
   float: left;
   margin-right: 24px;
@@ -1534,87 +1534,4 @@ div.pop_bg {
   bottom: 28px;
   color: #66ccff;
   font-size: 0.9166em;
-}
-
-@media screen and (max-width: 980px) {
-  #wrap {
-    padding: 0 10px;
-  }
-  * {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .header_body {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .header_body * {
-    position: static;
-  }
-  .mod_logo {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
-  }
-  .mod_top_address {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
-  .mod_top_address-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .mod_main_menu {
-    margin: 0 auto;
-  }
-  .mod_reservation {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  .email {
-    display: none;
-  }
-  .mod_callback {
-    display: none;
-  }
-}
-@media screen and (max-width: 576px) {
-  .mod_banners {
-    display: none;
-  }
-  #left {
-    display: none;
-  }
-  .margin_left {
-    margin-left: 0;
-  }
-  img {
-    width: 100%;
-  }
 }

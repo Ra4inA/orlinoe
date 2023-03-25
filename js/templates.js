@@ -56,38 +56,38 @@ jQuery(document).ready(function($){
 	
 	//	вспл. блоки слева
 	
-	$('.mod_events figcaption').hover(
-		function(){
-			$(this).animate(
-				{
-					'height' : 194
-				},
-				300
-			);
-			$(this).find('.wrap').animate(
-				{
-					'height' : 194
-				},
-				300
-			);
-			$(this).addClass('hover');
-		},
-		function(){
-			$(this).animate(
-				{
-					'height' : 83
-				},
-				100
-			);
-			$(this).find('.wrap').animate(
-				{
-					'height' : 83
-				},
-				100
-			);
-			$(this).removeClass('hover');
-		}
-	);
+	// $('.mod_events figcaption').hover(
+	// 	function(){
+	// 		$(this).animate(
+	// 			{
+	// 				'height' : 194
+	// 			},
+	// 			300
+	// 		);
+	// 		$(this).find('.wrap').animate(
+	// 			{
+	// 				'height' : 194
+	// 			},
+	// 			300
+	// 		);
+	// 		$(this).addClass('hover');
+	// 	},
+	// 	function(){
+	// 		$(this).animate(
+	// 			{
+	// 				'height' : 83
+	// 			},
+	// 			100
+	// 		);
+	// 		$(this).find('.wrap').animate(
+	// 			{
+	// 				'height' : 83
+	// 			},
+	// 			100
+	// 		);
+	// 		$(this).removeClass('hover');
+	// 	}
+	// );
 	
 	//	слайдер
 	
