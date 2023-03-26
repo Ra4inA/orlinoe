@@ -1924,6 +1924,12 @@ div.pop_bg {
   h5 {
     font-size: 1.13em;
   }
+  .more_sep {
+    display: none;
+  }
+  div.title_more .h1 {
+    margin-right: 10px;
+  }
   #wrap {
     font-size: 1.1em;
   }
