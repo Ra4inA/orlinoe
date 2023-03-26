@@ -123,6 +123,11 @@ div.right_body {
 	margin: 0 auto;
 }
 
+.footer_body .phone a {
+	color: #fff;
+	text-decoration: none;
+}
+
 /* ========== ========== */
 
 /* ========== A ========== */
@@ -2111,6 +2116,22 @@ div.pop_bg {
 
 @media screen and (max-width: 768px) {
 
+	h1 {
+		font-size: 1.8em;
+	}
+	h2 {
+		font-size: 1.63em;
+	}
+	h3 {
+		font-size: 1.43em;
+	}
+	h4 {
+		font-size: 1.33em;
+	}
+	h5 {
+		font-size: 1.13em;
+	}
+
 	#wrap {
 		font-size: 1.1em;
 	}
@@ -2141,7 +2162,41 @@ div.pop_bg {
 		position: absolute;
 	}
 
+	.menu__btn {
+		background-color: #0b51c3;
+        display: flex; /* используем flex для центрирования содержимого */
+        align-items: center;  /* центрируем содержимое кнопки */
+        justify-content: center;
+		position: fixed;
+        top: 75px;
+        left: 20px;  width: 32px;
+        height: 26px;  cursor: pointer;
+        z-index: 11;
+    }/* добавляем "гамбургер" */
+	
 
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        height: 2px;  background-color: rgba($color: #fff, $alpha: 0.7);
+        transition: all 0.2s ease;
+		width: 100%;
+    }
+	.menu__btn > span {
+		width: 80%;
+	}
+  .menu__btn > span::before {
+        content: '';
+        top: -8px;
+        transition: all 0.2s ease;
+    }
+  .menu__btn > span::after {
+        content: '';
+        top: 8px;
+        transition: all 0.2s ease;
+    }
 
 	 /* контейнер меню */
 	 .mod_main_menu .menu {
@@ -2455,64 +2510,4 @@ div.pop_bg {
 		flex: 1 1 100%;
 		margin-top: 20px;
 	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 768px) {
-	.menu__btn {
-		background-color: #0b51c3;
-        display: flex; /* используем flex для центрирования содержимого */
-        align-items: center;  /* центрируем содержимое кнопки */
-        justify-content: center;
-		position: fixed;
-        top: 75px;
-        left: 20px;  width: 32px;
-        height: 26px;  cursor: pointer;
-        z-index: 11;
-    }/* добавляем "гамбургер" */
-	
-
-    .menu__btn > span,
-    .menu__btn > span::before,
-    .menu__btn > span::after {
-        display: block;
-        position: absolute;
-        height: 2px;  background-color: rgba($color: #fff, $alpha: 0.7);
-        transition: all 0.2s ease;
-		width: 100%;
-    }
-	.menu__btn > span {
-		width: 80%;
-	}
-  .menu__btn > span::before {
-        content: '';
-        top: -8px;
-        transition: all 0.2s ease;
-    }
-  .menu__btn > span::after {
-        content: '';
-        top: 8px;
-        transition: all 0.2s ease;
-    }
 }
