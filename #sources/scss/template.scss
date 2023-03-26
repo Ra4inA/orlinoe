@@ -1774,6 +1774,9 @@ div.pop_bg {
 		box-sizing: border-box;
 	}
 
+	body {
+		background-color: #fff;
+	}
 
 	.abs_top {
 		display: none;
@@ -1794,6 +1797,11 @@ div.pop_bg {
 		flex-wrap: wrap;
 		align-items: center;
     }
+
+	header .header_body {
+		min-height: 115px !important;
+		padding-bottom: 18px !important;
+	}
 
     .header_body * {
         position: static;
@@ -1838,55 +1846,18 @@ div.pop_bg {
     .mod_top_address .email {
 		// width: 100%;
     }
-    .phone {
+    .phone a{
+		text-decoration: none;
     }
-    .yelow {
-    }
-    .sity {
-    }
-    .mod_callback {
-		// display: none;
-    }
-    .btn {
-    }
+ 
+ 
+
     .mod_main_menu {
 		margin: 0 auto;
     }
-    .menu {
-    }
+
     .mod_reservation {
 		display: none;
-    }
-    .wrap {
-    }
-    .title {
-    }
-    .form {
-		
-    }
-    .itext_pup {
-    }
-    .left {
-    }
-    .input_num_bx {
-    }
-    .minus {
-    }
-    .plus {
-    }
-    .itext_pup_num {
-    }
-    .right {
-    }
-    .itext_pup_num_child {
-    }
-    .childs {
-    }
-    .as_label {
-    }
-    .btn_bx {
-    }
-    .clr {
     }
 
 // more
@@ -2459,7 +2430,7 @@ div.pop_bg {
 
 
 @media screen and (max-width: 576px) {
-	.header_body {
+	header .header_body {
 		min-height: 100px;
 	}
 
