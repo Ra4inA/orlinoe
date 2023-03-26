@@ -1644,9 +1644,13 @@ div.pop_bg {
   }
   .mod_main_slider .prev {
     right: 51%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
   .mod_main_slider .next {
     left: 51%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
   .mod_banners {
     height: 213px;
@@ -1767,6 +1771,31 @@ div.pop_bg {
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
     margin-top: 20px;
+  }
+  .reservation_pop {
+    width: auto;
+    top: 35% !important;
+    left: 50% !important;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+  .reservation_pop .reviews_email_frm .itext_pup {
+    width: 100%;
+  }
+  .reservation_pop .btn_bx {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .reservation_pop .btn_bx .btn_reset {
+    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 830px) {
@@ -1893,6 +1922,11 @@ div.pop_bg {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 10px;
+    background-color: #1470da;
+    color: #eee;
+    border-radius: 10px;
+    max-width: 406px;
   }
   .rooms .center {
     margin: 0;
@@ -1908,6 +1942,84 @@ div.pop_bg {
   }
   .rooms .title {
     text-align: center;
+    color: #fff;
+  }
+  .reservation_pop .close {
+    top: 5px;
+    right: 5px;
+  }
+  .reservation_pop {
+    padding: 0;
+    width: 320px;
+  }
+  .reservation_pop .wrap {
+    padding: 10px;
+  }
+  .reservation_pop .reservation_frm {
+    margin-top: 10px;
+  }
+  .reservation_pop form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+  }
+  .reservation_pop .left_bx {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: auto;
+    margin-top: 10px;
+  }
+  .reservation_pop .desc_rooms {
+    padding-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .reservation_pop .desc_rooms .desc {
+    margin: 0;
+    text-align: left;
+  }
+  .reservation_pop .right_bx {
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: auto;
+    margin-top: 10px;
+  }
+  .reservation_pop .reviews_email_frm {
+    padding-top: 10px;
   }
   .reviews {
     display: -webkit-box;
