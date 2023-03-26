@@ -1675,6 +1675,7 @@ div.pop_bg {
     height: auto;
     -webkit-transform: translateX(-10px);
             transform: translateX(-10px);
+    min-height: 399px;
   }
   .mod_main_slider li {
     height: 100%;
