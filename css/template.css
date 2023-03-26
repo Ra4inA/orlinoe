@@ -1707,11 +1707,13 @@ div.pop_bg {
     right: 51%;
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
+    top: 350px;
   }
   .mod_main_slider .next {
     left: 51%;
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
+    top: 350px;
   }
   .mod_banners {
     height: 213px;
