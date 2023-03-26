@@ -31,6 +31,10 @@ div.abs_top {
   line-height: 1.7em;
 }
 
+.main_info img {
+  max-width: 100%;
+}
+
 .margin_left {
   margin-left: 272px;
 }
