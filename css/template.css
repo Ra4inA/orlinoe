@@ -1909,6 +1909,11 @@ div.pop_bg {
   }
 }
 @media screen and (max-width: 768px) {
+  p img {
+    display: block;
+    margin: 0 auto !important;
+    float: none !important;
+  }
   h1 {
     font-size: 1.8em;
   }
