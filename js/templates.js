@@ -54,40 +54,6 @@ jQuery(document).ready(function($){
 		return $.browser.opera? window.innerHeight : $(window).height();
 	}
 	
-	//	вспл. блоки слева
-	
-	// $('.mod_events figcaption').hover(
-	// 	function(){
-	// 		$(this).animate(
-	// 			{
-	// 				'height' : 194
-	// 			},
-	// 			300
-	// 		);
-	// 		$(this).find('.wrap').animate(
-	// 			{
-	// 				'height' : 194
-	// 			},
-	// 			300
-	// 		);
-	// 		$(this).addClass('hover');
-	// 	},
-	// 	function(){
-	// 		$(this).animate(
-	// 			{
-	// 				'height' : 83
-	// 			},
-	// 			100
-	// 		);
-	// 		$(this).find('.wrap').animate(
-	// 			{
-	// 				'height' : 83
-	// 			},
-	// 			100
-	// 		);
-	// 		$(this).removeClass('hover');
-	// 	}
-	// );
 	
 	//	слайдер
 	

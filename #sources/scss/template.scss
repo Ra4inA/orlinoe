@@ -56,6 +56,38 @@ header .header_body {
 	padding-bottom: 18px;
 }
 
+
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+	position: fixed;
+	pointer-events: none;
+	left: 0;
+	top: 0;
+}
+
+.menu__btn {
+    display: none;
+}
+
+// Логика работы кнопки меню
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .header_menu {
+  visibility: visible !important;
+  left: 0;
+}
+
+
 /* ===== Left ===== */
 
 div#left {
@@ -926,6 +958,10 @@ div.pop_bg {
 	background: url(../images/tpl/mod_top_address_phone.png) no-repeat left top;
 }
 
+.mod_top_address .phone a {
+	text-decoration: none;
+}
+
 .mod_top_address .phone span.yelow {
 	color: #ffd800;
 	font-size: 1.25em;
@@ -1242,30 +1278,6 @@ div.pop_bg {
 
 
 }
-
-
-// div.abs_top {
-// 	height: 7px;
-// 	width: 100%;
-// 	background: url(../images/tpl/abs_top.png) repeat-x left top;
-// 	position: absolute;
-// 	left: 0;
-// 	top: 773px;
-// 	z-index: 6;
-// }
-
-
-// .mod_banners:after {
-// 	content: '';
-// 	position: absolute;
-// 	width: 100vw;
-// 	height: 7px;
-// 	background: url(../images/tpl/abs_top.png) repeat-x left top;
-// 	z-index: 6;
-// 	bottom: 0;
-// 	left: 0;
-
-// }
 
 /* === mod_info_bxs === */
 
@@ -1833,25 +1845,7 @@ div.pop_bg {
         // max-width: 60%;
     }
 
-
-
-
-    .mod_logo {
-    }
-
-
-
-		
-    
-    .mod_top_address .email {
-		// width: 100%;
-    }
-    .phone a{
-		text-decoration: none;
-    }
  
- 
-
     .mod_main_menu {
 		margin: 0 auto;
     }
@@ -1860,23 +1854,22 @@ div.pop_bg {
 		display: none;
     }
 
-// more
-a.more {
-	background-position: right 60%;
-}
+	// more
 
-a.more:hover {
-	background-position: right 60%;
-}
-// slider
+	a.more {
+		background-position: right 60%;
+	}
 
-.mod_main_slider {
-	height: auto;
-	transform: translateX(-10px);
-}
+	a.more:hover {
+		background-position: right 60%;
+	}
 
-.mod_main_menu ul {}
+	// slider
 
+	.mod_main_slider {
+		height: auto;
+		transform: translateX(-10px);
+	}
 .mod_main_slider li {
 	height: 100%;
 	width: 100vw;
@@ -1915,12 +1908,6 @@ a.more:hover {
 	transform: translateX(50%);
 }
 
-
-
-
-
-
-
 	// banners
 
 	.mod_banners {
@@ -1950,7 +1937,6 @@ a.more:hover {
 	}
 
 	.mod_banners figure:last-of-type {
-		// display: none;
 		flex: 1 1 100%
 	}
 
@@ -1998,10 +1984,7 @@ a.more:hover {
 		min-width: 200px;
 	}
 
-
-
-
-	/* === mod_content_galery === */
+	// mod_content_galery
 
 .mod_content_galery {
 	min-height: 250px;
@@ -2011,10 +1994,6 @@ a.more:hover {
 }
 
 .mod_content_galery figure {
-	// height: 250px;
-	// width: 223px;
-	// display: inline-block;
-	// margin: 0;
 	flex: 0 0 33.33%
 }
 
@@ -2039,19 +2018,12 @@ a.more:hover {
 	text-align: center;
 }
 
-
-
-
-
-
 // footer
 
 #footer {
 	height: auto;
 	background-position: top;
 	background-size: cover;
-	// display: flex;
-	// justify-content: center;
 }
 
 .footer_body {
@@ -2086,9 +2058,6 @@ a.more:hover {
 	flex: 1 1 100%;
 	margin-top: 20px;
 }
-
-
-
 
 // Rooms
 
@@ -2164,17 +2133,8 @@ div.pop_bg {
 		margin-left: 20px;
 	}
 
-	.mod_top_address-inner .phone {
-		// display: flex;
-		// flex-direction: column;
-	}
-
 	.email {
 		display: none;
-	}
-
-	.mod_callback {
-		// display: none;
 	}
 
 	.mod_main_menu {
@@ -2183,7 +2143,39 @@ div.pop_bg {
 
 
 
-		/* === mod_content_galery === */
+	 /* контейнер меню */
+	 .mod_main_menu .menu {
+        transition: all 0.2s ease;
+        display: flex;
+		flex-direction: column;
+		justify-content: center;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;  
+        width: 300px;
+        height: 100vh;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background: #fff url(../images/tpl/main_body.jpg) no-repeat left top;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        z-index: 10;
+	}
+	  /* элементы меню */
+      .mod_main_menu li {
+        display: block;
+		width: 100%;
+		background: none;
+      }
+      .mod_main_menu a {
+		line-height: 1.9em;
+		background: none;
+	  }
+
+
+		// mod_content_galery
 
 .mod_content_galery {
 	flex-direction: column;
@@ -2193,10 +2185,6 @@ div.pop_bg {
 }
 
 .mod_content_galery figure {
-	// height: 250px;
-	// width: 223px;
-	// display: inline-block;
-	// margin: 0;	
 	width: 100%;
 	flex: 1 1 100%;
 	margin-bottom: 50px;
@@ -2205,22 +2193,12 @@ div.pop_bg {
 
 .mod_content_galery figure:last-of-type {
 	margin-bottom: 0;
-	// width: 90%;
-	// flex: 0 0 100%;
 }
-
-.mod_content_galery figure img {
-	// width: 100%;
-}
-
-
-
 
 // reviews
 
 .mod_reviews {
 	flex-direction: column;
-	// align-items: center;
 }
 
 .mod_reviews figure {
@@ -2230,7 +2208,6 @@ div.pop_bg {
 	border-right: none;
 
 	margin-top: 10px;
-	// margin-bottom: 10px;
 }
 
 
@@ -2371,8 +2348,6 @@ div.pop_bg {
 }
 .reservation_pop .desc_rooms .desc {
 	margin: 0;
-	// align-self: start;
-
 	text-align: left;
 }
 
@@ -2390,18 +2365,12 @@ div.pop_bg {
 }
 
 
-
-
 // REVIEWS
 
 .reviews {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-
-.reviews .left {
-	
 }
 
 .reviews .right {
@@ -2415,8 +2384,6 @@ div.pop_bg {
 .reviews .date {
 	order: 1;
 }
-
-
 
 #comment {
 	width: 550px;
@@ -2447,42 +2414,26 @@ div.pop_bg {
 	body.main {
 		background: none;
 	}
-
-	.main_info img{
-		// width: 100%;
-	}
 	
 	
 	.mod_breadcrumb img {
 		width: auto;
 	}
 
-	
+	// slider
 
-
-
-
-
+	.mod_main_slider li {
+		background: none;
+	}
 	// banners
 
 	.mod_banners {
 		display: none;
 	}
 
-
-
-
-
-	// img {
-	// 	width: 100%;
-	// }
-
 	.mod_reviews figure img {
 		width: auto;
 	}
-
-
-
 
 	// list pages
 
@@ -2504,11 +2455,6 @@ div.pop_bg {
 		flex: 1 1 100%;
 		margin-top: 20px;
 	}
-
-
-.list_pages img{
-	// width: auto;
-}
 }
 
 
@@ -2523,67 +2469,12 @@ div.pop_bg {
 
 
 
-/* скрываем чекбокс */
-#menu__toggle {
-    opacity: 0;
-	position: fixed;
-	pointer-events: none;
-	left: 0;
-	top: 0;
-}
-.menu__btn {
-    display: none;
-}
 
 
 
-#menu__toggle:checked ~ .menu__btn > span {
-    transform: rotate(45deg);
-}
-#menu__toggle:checked ~ .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0);
-}
-#menu__toggle:checked ~ .menu__btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
-}
-#menu__toggle:checked ~ .header_menu {
-  visibility: visible !important;
-  left: 0;
-}
 
 
 
-// ul.menu {
-//     display: flex;
-//     flex: 1 1 auto;
-//     max-width: 400px;
-//     margin: 0 auto;
-//     align-items: center;
-
-// }
-
-// ul.menu li {
-//     display: flex;
-//     flex: 1 1 auto;
-// }
-
-// .nav-list-button {
-//     // flex: 1 1 auto;
-//     // text-align: center;
-//     // color: #fff;
-//     // transition: all 0.2s ease;
-//     // padding: 25px 0;
-//     // cursor: pointer;
-    
-
-// }
-
-// .nav-list-button:hover, ._active {
-//     background-color: rgba(242,203,10, 0.8);
-//     color: #111;
-// }
 
 
 
@@ -2624,47 +2515,4 @@ div.pop_bg {
         top: 8px;
         transition: all 0.2s ease;
     }
-
-
-
-    
-
-    /* контейнер меню */
-    .mod_main_menu .menu {
-        transition: all 0.2s ease;
-        display: flex;
-		flex-direction: column;
-		justify-content: center;
-        position: fixed;
-        visibility: hidden;
-        top: 0;
-        left: -100%;  
-        width: 300px;
-        height: 100vh;
-        margin: 0;
-        padding: 80px 0;
-        list-style: none;
-        text-align: center;
-        background: #fff url(../images/tpl/main_body.jpg) no-repeat left top;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-        z-index: 10;
-      }/* элементы меню */
-      .mod_main_menu li {
-        display: block;
-		width: 100%;
-
-        // font-size: 1em;
-		
-
-		background: none;
-		
-
-      }
-
-      .mod_main_menu a {
-		line-height: 1.9em;
-		background: none;
-	  }
-
-	
 }

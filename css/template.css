@@ -46,6 +46,41 @@ header .header_body {
   padding-bottom: 18px;
 }
 
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+}
+
+.menu__btn {
+  display: none;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .header_menu {
+  visibility: visible !important;
+  left: 0;
+}
+
 /* ===== Left ===== */
 div#left {
   width: 252px;
@@ -827,6 +862,10 @@ div.pop_bg {
 
 .mod_top_address .phone {
   background: url(../images/tpl/mod_top_address_phone.png) no-repeat left top;
+}
+
+.mod_top_address .phone a {
+  text-decoration: none;
 }
 
 .mod_top_address .phone span.yelow {
@@ -1611,9 +1650,6 @@ div.pop_bg {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .phone a {
-    text-decoration: none;
-  }
   .mod_main_menu {
     margin: 0 auto;
   }
@@ -1739,7 +1775,6 @@ div.pop_bg {
   table.tbl th {
     min-width: 200px;
   }
-  /* === mod_content_galery === */
   .mod_content_galery {
     min-height: 250px;
     display: -webkit-box;
@@ -1887,7 +1922,45 @@ div.pop_bg {
   .mod_main_menu {
     position: absolute;
   }
-  /* === mod_content_galery === */
+  /* контейнер меню */
+  .mod_main_menu .menu {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100vh;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background: #fff url(../images/tpl/main_body.jpg) no-repeat left top;
+    -webkit-box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  /* элементы меню */
+  .mod_main_menu li {
+    display: block;
+    width: 100%;
+    background: none;
+  }
+  .mod_main_menu a {
+    line-height: 1.9em;
+    background: none;
+  }
   .mod_content_galery {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2143,6 +2216,9 @@ div.pop_bg {
   .mod_breadcrumb img {
     width: auto;
   }
+  .mod_main_slider li {
+    background: none;
+  }
   .mod_banners {
     display: none;
   }
@@ -2165,41 +2241,6 @@ div.pop_bg {
     margin-top: 20px;
   }
 }
-/* скрываем чекбокс */
-#menu__toggle {
-  opacity: 0;
-  position: fixed;
-  pointer-events: none;
-  left: 0;
-  top: 0;
-}
-
-.menu__btn {
-  display: none;
-}
-
-#menu__toggle:checked ~ .menu__btn > span {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-#menu__toggle:checked ~ .menu__btn > span::before {
-  top: 0;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-}
-
-#menu__toggle:checked ~ .menu__btn > span::after {
-  top: 0;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-#menu__toggle:checked ~ .header_menu {
-  visibility: visible !important;
-  left: 0;
-}
-
 @media screen and (max-width: 768px) {
   .menu__btn {
     background-color: #0b51c3;
@@ -2245,43 +2286,5 @@ div.pop_bg {
     top: 8px;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
-  }
-  /* контейнер меню */
-  .mod_main_menu .menu {
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: fixed;
-    visibility: hidden;
-    top: 0;
-    left: -100%;
-    width: 300px;
-    height: 100vh;
-    margin: 0;
-    padding: 80px 0;
-    list-style: none;
-    text-align: center;
-    background: #fff url(../images/tpl/main_body.jpg) no-repeat left top;
-    -webkit-box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-            box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-  } /* элементы меню */
-  .mod_main_menu li {
-    display: block;
-    width: 100%;
-    background: none;
-  }
-  .mod_main_menu a {
-    line-height: 1.9em;
-    background: none;
   }
 }
