@@ -38,7 +38,7 @@ div.abs_top {
 /* ===== Шапка ===== */
 header .header_body {
   min-height: 159px;
-  padding-bottom: 0;
+  padding-bottom: 10px;
 }
 
 .main header .header_body {
@@ -281,6 +281,7 @@ div.title_more .more {
   font-size: 0.9166em;
   position: relative;
   top: -3px;
+  display: inline-block;
 }
 
 /* === input_num_bx === */
@@ -1546,6 +1547,9 @@ div.pop_bg {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+  .abs_top {
+    display: none;
+  }
   .main {
     overflow-x: hidden;
   }
@@ -1605,6 +1609,12 @@ div.pop_bg {
   }
   .mod_reservation {
     display: none;
+  }
+  a.more {
+    background-position: right 60%;
+  }
+  a.more:hover {
+    background-position: right 60%;
   }
   .mod_main_slider {
     height: auto;
@@ -1694,6 +1704,31 @@ div.pop_bg {
   .margin_left {
     margin-left: 0;
   }
+  .mod_info_bxs {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .mod_info_bxs figure {
+    height: auto;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), color-stop(90%, rgb(233, 239, 247)));
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(233, 239, 247) 90%);
+  }
+  .mod_content_galery figcaption p {
+    text-align: center;
+  }
+  .tbl {
+    display: block;
+    overflow-x: scroll;
+  }
+  table.tbl th {
+    min-width: 200px;
+  }
   /* === mod_content_galery === */
   .mod_content_galery {
     min-height: 250px;
@@ -1755,6 +1790,7 @@ div.pop_bg {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 20px 10px;
+    background-color: #0b51c3;
   }
   .footer_body * {
     position: static;
@@ -1772,12 +1808,19 @@ div.pop_bg {
             flex: 1 1 100%;
     margin-top: 20px;
   }
+  div.pop_bg {
+    height: 100vh !important;
+    position: fixed;
+  }
   .reservation_pop {
     width: auto;
-    top: 35% !important;
+    top: 50% !important;
     left: 50% !important;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 80vh;
+    position: fixed;
+    overflow-y: scroll;
   }
   .reservation_pop .reviews_email_frm .itext_pup {
     width: 100%;
@@ -1924,7 +1967,6 @@ div.pop_bg {
             align-items: center;
     padding: 10px;
     background-color: #1470da;
-    color: #eee;
     border-radius: 10px;
     max-width: 406px;
   }
@@ -1936,6 +1978,7 @@ div.pop_bg {
   }
   .rooms .radius_orange {
     padding-left: 18px;
+    color: #eee;
   }
   .rooms .right .btn {
     line-height: 1.9em;
@@ -1943,6 +1986,21 @@ div.pop_bg {
   .rooms .title {
     text-align: center;
     color: #fff;
+  }
+  .rooms .open_info {
+    display: block;
+  }
+  .full_info .mod_slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .reservation_pop .close {
     top: 5px;
@@ -2059,11 +2117,15 @@ div.pop_bg {
   }
 }
 @media screen and (max-width: 576px) {
+  .header_body {
+    min-height: 100px;
+  }
   .mod_logo {
     width: auto;
   }
   .mod_top_address .phone {
     font-size: 0.6em;
+    line-height: 1.4em;
   }
   body.main {
     background: none;
@@ -2130,16 +2192,20 @@ div.pop_bg {
 
 @media screen and (max-width: 768px) {
   .menu__btn {
+    background-color: #0b51c3;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; /* используем flex для центрирования содержимого */
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; /* центрируем содержимое кнопки */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: fixed;
-    top: 20px;
+    top: 75px;
     left: 20px;
-    width: 26px;
+    width: 32px;
     height: 26px;
     cursor: pointer;
     z-index: 11;
@@ -2149,11 +2215,14 @@ div.pop_bg {
 .menu__btn > span::after {
     display: block;
     position: absolute;
-    width: 100%;
     height: 2px;
     background-color: rgba(255, 255, 255, 0.7);
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
+    width: 100%;
+  }
+  .menu__btn > span {
+    width: 80%;
   }
   .menu__btn > span::before {
     content: "";
@@ -2171,7 +2240,16 @@ div.pop_bg {
   .mod_main_menu .menu {
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: fixed;
     visibility: hidden;
     top: 0;
