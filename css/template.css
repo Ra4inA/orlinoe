@@ -1878,6 +1878,9 @@ div.pop_bg {
     position: fixed;
     overflow-y: scroll;
   }
+  .reservation_pop .reservation_frm .itext_pup {
+    width: 100%;
+  }
   .reservation_pop .reviews_email_frm .itext_pup {
     width: 100%;
   }
