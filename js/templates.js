@@ -259,3 +259,10 @@ jQuery(document).ready(function($){
 	
 	
 });
+
+
+// Fancybox
+
+Fancybox.bind("[data-fancybox]", {
+	
+  });
