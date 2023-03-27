@@ -104,7 +104,7 @@ div.right_body {
 #footer {
   font-size: 0.75em;
   z-index: 6;
-  background: url(../images/tpl/footer.jpg) no-repeat left bottom;
+  background: url(../images/tpl/footer.jpg) no-repeat center bottom;
 }
 
 .footer_body {

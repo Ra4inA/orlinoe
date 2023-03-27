@@ -85,7 +85,7 @@ body.main {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 100%;
 	color: #6b747c;
-	background: #fff url(../images/tpl/main_body.jpg) no-repeat left top;
+	background: #fff url(../images/tpl/main_body.jpg) no-repeat center top;
 }
 
 /* ========== h ========== */
