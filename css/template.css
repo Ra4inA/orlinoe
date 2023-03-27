@@ -1057,7 +1057,7 @@ div.pop_bg {
   background: #e7e7e7;
   color: #676f7b;
   padding: 3px;
-  margin-bottom: 26px;
+  margin: 0 5px 26px 5px;
 }
 
 .mod_main_slider .btn {
