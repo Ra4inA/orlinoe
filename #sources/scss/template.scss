@@ -1200,7 +1200,7 @@ div.pop_bg {
 	background: #e7e7e7;
 	color: #676f7b;
 	padding: 3px;
-	margin: 0 5px 26px 5px;
+	margin-bottom: 26px;
 }
 
 .mod_main_slider .btn {
@@ -1893,6 +1893,7 @@ div.pop_bg {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 0 5px;
 }
 
 .mod_main_slider .btn  {
