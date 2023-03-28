@@ -58,7 +58,7 @@ jQuery(document).ready(function($){
 	//	слайдер
 	
 	$(".mod_main_slider ul").carouFredSel({
-		auto    : false,
+		auto    : true,
 		prev    : ".mod_main_slider .prev",
 		next    : ".mod_main_slider .next",
 		scroll  : 1
@@ -263,6 +263,6 @@ jQuery(document).ready(function($){
 
 // Fancybox
 
-Fancybox.bind("[data-fancybox]", {
+Fancybox.bind(".fancybox", {
 	
   });
